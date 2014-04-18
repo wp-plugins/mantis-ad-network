@@ -10,20 +10,16 @@ class MantisAdsWidget extends WP_Widget
 	public function widget($args, $instance)
 	{
 		$args = wp_parse_args($instance, array(
-			'zone'    => null,
-			'desktop' => null,
-			'mobile'  => null
+			'zone' => null
 		));
 
-		if ($args['zone'] && ($args['desktop'] || $args['mobile'])) {
+		if ($args['zone']) {
 			if (!has_action('wp_footer', 'mantis_ad_footer')) {
 				add_action('wp_footer', 'mantis_ad_footer');
 			}
 
 			$attrs = array(
-				'data-mantis-zone'    => $args['zone'],
-				'data-mantis-desktop' => $args['desktop'],
-				'data-mantis-mobile'  => $args['mobile']
+				'data-mantis-zone' => $args['zone']
 			);
 
 			$attrs = implode(' ', array_map(function ($v, $k) {
@@ -43,19 +39,6 @@ class MantisAdsWidget extends WP_Widget
 
 	public function update($new, $old)
 	{
-		$zones = mantis_ad_zones();
-
-		if (isset($new['zone'])) {
-			foreach ($zones as $zone) {
-				if ($zone->zone == $new['zone']) {
-					$new['desktop'] = $zone->desktop;
-					$new['mobile'] = $zone->mobile;
-
-					break;
-				}
-			}
-		}
-
 		return $new;
 	}
 }
@@ -71,7 +54,7 @@ function mantis_ad_zones()
 
 		try {
 			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, "https://admin.mantisadnetwork.com/api/wordpress/zones/?site=$site");
+			curl_setopt($ch, CURLOPT_URL, "http://mantodea.mantisadnetwork.com/wordpress/zones/$site");
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			$data = curl_exec($ch);
 			curl_close($ch);

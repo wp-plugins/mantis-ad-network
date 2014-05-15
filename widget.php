@@ -15,18 +15,26 @@ class MantisAdsWidget extends WP_Widget
 
 		if ($args['zone']) {
 			if (!has_action('wp_footer', 'mantis_ad_footer')) {
-				add_action('wp_footer', 'mantis_ad_footer');
+				add_action('wp_footer', 'mantis_ad_footer', 20);
 			}
 
 			$attrs = array(
 				'data-mantis-zone' => $args['zone']
 			);
 
+			$class = '';
+
+			if($args['mobileFloat']){
+				$class = "mantis-float mantis-float-$args[mobileFloat]";
+
+				wp_enqueue_script('jquery');
+			}
+
 			$attrs = implode(' ', array_map(function ($v, $k) {
 				return "$k='$v'";
 			}, $attrs, array_keys($attrs)));
 
-			echo "<div class='mantis-ad'><div $attrs></div></div>";
+			echo "<div class='mantis-ad $class'><div $attrs></div></div>";
 		}
 	}
 

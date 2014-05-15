@@ -2,7 +2,7 @@
 Tags: mantis,ads,advertisement
 Requires at least: 3.7.0
 Tested up to: 3.7.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 
 Easily serve advertisements from the MANTIS Ad Network on your website.
 
@@ -28,6 +28,11 @@ In order to use this plugin, you must have been accepted as a publisher into the
 3. The end result
 
 == Changelog ==
+
+= 1.1.1 =
+
+* Ability to float mobile banners on top or bottom of page
+* Removed legacy "exclusive" definition
 
 = 1.1.0 =
 

@@ -34,7 +34,7 @@ class MantisAdsWidget extends WP_Widget
 				return "$k='$v'";
 			}, $attrs, array_keys($attrs)));
 
-			echo "<div class='mantis-ad $class'><div $attrs></div></div>";
+			echo "<div class='widget'><div class='mantis-ad $class'><div $attrs></div></div></div>";
 		}
 	}
 

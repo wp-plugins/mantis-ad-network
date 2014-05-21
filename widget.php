@@ -9,6 +9,8 @@ class MantisAdsWidget extends WP_Widget
 
 	public function widget($args, $instance)
 	{
+		extract( $args );
+
 		$args = wp_parse_args($instance, array(
 			'zone' => null
 		));
@@ -34,7 +36,11 @@ class MantisAdsWidget extends WP_Widget
 				return "$k='$v'";
 			}, $attrs, array_keys($attrs)));
 
-			echo "<div class='widget'><div class='mantis-ad $class'><div $attrs></div></div></div>";
+			echo $before_widget;
+
+			echo "<div class='mantis-ad $class'><div $attrs></div></div>";
+
+			echo $after_widget;
 		}
 	}
 

@@ -3,7 +3,7 @@
 Plugin Name: Mantis Ad Network
 Plugin URI: http://wordpress.org/extend/plugins/mantis-ad-network/
 Description: Easily serve advertisements from the Mantis Ad Network on your website.
-Version: 1.1.4
+Version: 1.1.5
 Author: Mantis Ad Network
 Author URI: http://www.mantisadnetwork.com
 Author Email: contact@mantisadnetwork.com
@@ -36,6 +36,17 @@ define('MANTIS_ROOT', dirname(__FILE__));
 
 require_once(MANTIS_ROOT . '/admin.php');
 require_once(MANTIS_ROOT . '/widget.php');
+
+function mantis_always_footer()
+{
+	if (get_option('mantis_always')) {
+		if (!has_action('wp_footer', 'mantis_ad_footer')) {
+			add_action('wp_footer', 'mantis_ad_footer', 20);
+		}
+	}
+}
+
+add_action('init', 'mantis_always_footer');
 
 /**
  * Action is registered as wp_footer if at least one advertisement is on the page

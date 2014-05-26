@@ -23,6 +23,17 @@
 					<p class="description">When enabled, the loading of MANTIS advertisements will not impact the time it takes to load a page. However, you may notice a slight delay in serving ads with this option enabled.</a></p>
 				</td>
 			</tr>
+
+			<tr valign="top">
+				<th scope="row">Include Javascript at all times</th>
+				<td>
+					<select name="mantis_always">
+						<option value="0">Turn Off</option>
+						<option value="1" <?php echo get_option('mantis_always') ? 'selected="selected"' : ''; ?>>Turn On</option>
+					</select>
+					<p class="description">When enabled, the MANTIS javascript library will always load in the footer. Enable this if you added custom zone tags to your theme.</a></p>
+				</td>
+			</tr>
 		</table>
 
 		<?php submit_button(); ?>

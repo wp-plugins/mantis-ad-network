@@ -29,6 +29,9 @@ In order to use this plugin, you must have been accepted as a publisher into the
 
 == Changelog ==
 
+= 1.1.5 =
+* Ability to always include plugin on page
+
 = 1.1.4 =
 * Doing widget class wrapping the right way
 

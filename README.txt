@@ -2,7 +2,7 @@
 Tags: mantis,ads,advertisement
 Requires at least: 3.7.0
 Tested up to: 3.7.1
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 
 Easily serve advertisements from the MANTIS Ad Network on your website.
 

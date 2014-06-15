@@ -75,7 +75,11 @@ function mantis_ad_zones()
 			$data = curl_exec($ch);
 			curl_close($ch);
 
-			$zones = json_decode($data) ? : array();
+			$zones = json_decode($data);
+
+			if(!$zones){
+				$zones = array();
+			}
 		} catch (Exception $ex) {
 			error_log($ex);
 		}

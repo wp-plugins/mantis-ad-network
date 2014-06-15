@@ -2,7 +2,7 @@
 Tags: mantis,ads,advertisement
 Requires at least: 3.7.0
 Tested up to: 3.7.1
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 
 Easily serve advertisements from the MANTIS Ad Network on your website.
 
@@ -28,6 +28,9 @@ In order to use this plugin, you must have been accepted as a publisher into the
 3. The end result
 
 == Changelog ==
+
+= 1.1.7 =
+* Removed elvis operator to support old PHP versions
 
 = 1.1.6 =
 * Switched from anonymous functions to support old PHP versions

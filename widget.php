@@ -32,9 +32,7 @@ class MantisAdsWidget extends WP_Widget
 				wp_enqueue_script('jquery');
 			}
 
-			$attrs = implode(' ', array_map(function ($v, $k) {
-				return "$k='$v'";
-			}, $attrs, array_keys($attrs)));
+			$attrs = implode(' ', array_map('mantis_attr_map', $attrs, array_keys($attrs)));
 
 			echo $before_widget;
 
@@ -55,6 +53,10 @@ class MantisAdsWidget extends WP_Widget
 	{
 		return $new;
 	}
+}
+
+function mantis_attr_map($v, $k){
+	return "$k='$v'";
 }
 
 function mantis_ad_zones()

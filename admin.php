@@ -31,6 +31,7 @@ class MantisAdOptions
 		register_setting('mantis-settings', 'mantis_site_id');
 		register_setting('mantis-settings', 'mantis_async');
 		register_setting('mantis-settings', 'mantis_always');
+        register_setting('mantis-settings', 'mantis_recommend');
 	}
 
 	public function menu()

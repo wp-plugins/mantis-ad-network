@@ -34,6 +34,19 @@
 					<p class="description">When enabled, the MANTIS javascript library will always load in the footer. Enable this if you added custom zone tags to your theme.</a></p>
 				</td>
 			</tr>
+
+            <tr valign="top">
+                <th scope="row">Recommended Content Widget</th>
+                <td>
+                    <select name="mantis_recommend">
+                        <option value="">Turn Off</option>
+                        <option value="after_content" <?php echo get_option('mantis_recommend') == 'after_content' ? 'selected="selected"' : ''; ?>>Show After Content</option>
+                        <option value="before_comments" <?php echo get_option('mantis_recommend') == 'before_comments' ? 'selected="selected"' : ''; ?>>Show Before Comments</option>
+                        <option value="after_comments" <?php echo get_option('mantis_recommend') == 'after_comments' ? 'selected="selected"' : ''; ?>>Show After Comments</option>
+                    </select>
+                    <p class="description">When enabled, the MANTIS content recommendation widget will display after your post content.</a></p>
+                </td>
+            </tr>
 		</table>
 
 		<?php submit_button(); ?>

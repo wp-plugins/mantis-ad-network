@@ -4,7 +4,9 @@ function mantis_recommend_html()
 {
     ob_start();
 
-    require(MANTIS_ROOT . '/html/recommend.html');
+    $site = get_option('mantis_site_id');
+
+    require(MANTIS_ROOT . '/html/recommend.php');
 
     $html = ob_get_contents();
 

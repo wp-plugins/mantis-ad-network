@@ -9,11 +9,9 @@ class MantisAdsWidget extends WP_Widget
 
 	public function widget($args, $instance)
 	{
-		extract( $args );
-
-		$args = wp_parse_args($instance, array(
+		$args = array_merge($args, wp_parse_args($instance, array(
 			'zone' => null
-		));
+		)));
 
 		if ($args['zone']) {
 			if (!has_action('wp_footer', 'mantis_ad_footer')) {
@@ -36,7 +34,11 @@ class MantisAdsWidget extends WP_Widget
 
 			do_action('mantis_before_widget');
 
+			echo $args['before_widget'];
+
 			echo "<div class='mantis-ad $class'><div $attrs></div></div>";
+
+			echo $args['after_widget'];
 
             do_action('mantis_after_widget');
 		}

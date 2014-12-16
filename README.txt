@@ -2,7 +2,7 @@
 Tags: mantis,ads,advertisement
 Requires at least: 3.7.0
 Tested up to: 4.0
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 
 Easily serve advertisements from the MANTIS Ad Network on your website.
 
@@ -28,6 +28,9 @@ In order to use this plugin, you must have been accepted as a publisher into the
 3. The end result
 
 == Changelog 
+
+= 1.2.3 =
+* Fixed bug introduced with last change
 
 = 1.2.2 =
 * Fixed broken before/after variables, ability to hook pre/post widget

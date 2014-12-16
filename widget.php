@@ -34,11 +34,11 @@ class MantisAdsWidget extends WP_Widget
 
 			$attrs = implode(' ', array_map('mantis_attr_map', $attrs, array_keys($attrs)));
 
-			echo $before_widget;
+			do_action('mantis_before_widget');
 
 			echo "<div class='mantis-ad $class'><div $attrs></div></div>";
 
-			echo $after_widget;
+            do_action('mantis_after_widget');
 		}
 	}
 

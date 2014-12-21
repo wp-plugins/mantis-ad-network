@@ -13,6 +13,12 @@
 			<option value="bottom" <?php echo isset($instance['mobileFloat']) && $instance['mobileFloat'] == 'bottom' ? 'selected="selected"' : ''?>>Stick to bottom</option>
 		</select>
 	</div>
+    <div>
+        Responsive: <select name="<?php echo $this->get_field_name('fixed'); ?>">
+            <option value="">Dynamicly resize ad</option>
+            <option value="1" <?php echo isset($instance['fixed']) && $instance['fixed'] == '1' ? 'selected="selected"' : ''?>>Enforce exact ad size</option>
+        </select>
+    </div>
 <?php else: ?>
 	There was a problem accessing MANTIS, please try again later.
 <?php endif; ?>

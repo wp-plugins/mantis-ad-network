@@ -1,8 +1,8 @@
 === MANTIS Ad Network ===
 Tags: mantis,ads,advertisement
 Requires at least: 3.7.0
-Tested up to: 4.0
-Stable tag: 1.2.3
+Tested up to: 4.1
+Stable tag: 1.2.4
 
 Easily serve advertisements from the MANTIS Ad Network on your website.
 
@@ -28,6 +28,9 @@ In order to use this plugin, you must have been accepted as a publisher into the
 3. The end result
 
 == Changelog 
+
+= 1.2.4 =
+* Ability to disable responsive sizing of ads
 
 = 1.2.3 =
 * Fixed bug introduced with last change

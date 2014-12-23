@@ -9,7 +9,7 @@
 				<th scope="row">Website Identifier:</th>
 				<td>
 					<input type="text" name="mantis_site_id" value="<?php echo get_option('mantis_site_id'); ?>" />
-					<p class="description">This identifier can be found in the top right of your <a href="https://admin.mantisadnetwork.com" target="_blank">MANTIS administrative panel.</a></p>
+					<p class="description">This identifier can be found in the top left of your <a href="https://admin.mantisadnetwork.com" target="_blank">MANTIS administrative panel.</a></p>
 				</td>
 			</tr>
 

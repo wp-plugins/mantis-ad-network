@@ -9,7 +9,7 @@
 				<th scope="row">Website Identifier:</th>
 				<td>
 					<input type="text" name="mantis_site_id" value="<?php echo get_option('mantis_site_id'); ?>" />
-					<p class="description">This identifier can be found in the top left of your <a href="https://admin.mantisadnetwork.com" target="_blank">MANTIS administrative panel.</a></p>
+					<p class="description">This identifier can be found in the code tab of your <a href="https://admin.mantisadnetwork.com" target="_blank">MANTIS administrative panel.</a></p>
 				</td>
 			</tr>
 
@@ -20,7 +20,7 @@
 						<option value="0">Turn Off</option>
 						<option value="1" <?php echo get_option('mantis_async') ? 'selected="selected"' : ''; ?>>Turn On</option>
 					</select>
-					<p class="description">When enabled, the loading of MANTIS advertisements will not impact the time it takes to load a page. However, you may notice a slight delay in serving ads with this option enabled.</a></p>
+					<p class="description">When enabled, the loading of MANTIS advertisements will not impact the time it takes to load a page. However, you may notice a slight delay in serving ads with this option enabled. DO NOT turn on if you use services like CloudFlare.</a></p>
 				</td>
 			</tr>
 

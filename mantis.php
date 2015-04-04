@@ -3,7 +3,7 @@
 Plugin Name: Mantis Ad Network
 Plugin URI: http://wordpress.org/extend/plugins/mantis-ad-network/
 Description: Easily serve advertisements from the Mantis Ad Network on your website.
-Version: 1.2.5
+Version: 1.2.6
 Author: Mantis Ad Network
 Author URI: http://www.mantisadnetwork.com
 Author Email: contact@mantisadnetwork.com

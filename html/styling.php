@@ -25,15 +25,17 @@
 	}
 </style>
 <script type="text/javascript">
-	(function($){
-		var hasFloat = $('.mantis-float');
+	if(window.jQuery) {
+		(function($){
+			var hasFloat = $('.mantis-float');
 
-		if(hasFloat.length > 0){
-			if(hasFloat.hasClass('mantis-float-top')){
-				$('html').addClass('mantis-float-top');
-			}else{
-				$('html').addClass('mantis-float-bottom');
+			if(hasFloat.length > 0){
+				if(hasFloat.hasClass('mantis-float-top')){
+					$('html').addClass('mantis-float-top');
+				}else{
+					$('html').addClass('mantis-float-bottom');
+				}
 			}
-		}
-	})(jQuery);
+		})(jQuery);
+	}
 </script>

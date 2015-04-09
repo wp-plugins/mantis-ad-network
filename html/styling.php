@@ -17,10 +17,12 @@
 
 		.mantis-ad.mantis-float-top > div{
 			top: 0;
+			left: 0;
 		}
 
 		.mantis-ad.mantis-float-bottom > div{
 			bottom: 0;
+			left: 0;
 		}
 	}
 </style>
